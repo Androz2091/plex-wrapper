@@ -19,4 +19,5 @@ export declare class PlexAPIClient {
     removeUser(userId: string): any;
     removePendingUser(userId: string): any;
     getSessions(ip: string, port: number): Promise<PlexSession[]>;
+    isValidUser(emailOrUsername: string): Promise<boolean>;
 }
