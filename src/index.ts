@@ -155,7 +155,7 @@ export class PlexAPIClient {
     });
   }
 
-  inviteUser(username: string, machineId: string): any {
+  inviteUser(username: string, machineId: string, librarySectionIds: string[] = []): any {
     if (this.accessToken === '') return this.authenticate().then(() => this.inviteUser(username, machineId));
     let options: {} = {
       method: 'POST',
@@ -166,7 +166,7 @@ export class PlexAPIClient {
       },
       form: {
         invitedEmail: username,
-        librarySectionIds: [],
+        librarySectionIds,
         machineIdentifier: machineId,
         settings: {}
       }
