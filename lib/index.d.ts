@@ -15,7 +15,7 @@ export declare class PlexAPIClient {
     getPendingUsers(): Promise<PlexUser[]>;
     getAllUsers(): Promise<PlexUser[]>;
     getPendingFriends(): Promise<any[]>;
-    inviteUser(username: string, machineId: string, librarySectionIds?: string[]): any;
+    inviteUser(username: string, machineId: string, librarySectionIds?: number[]): any;
     removeUser(userId: string): any;
     removePendingUser(userId: string): any;
     getSessions(ip: string, port: number): Promise<PlexSession[]>;
